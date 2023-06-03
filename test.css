@@ -1,0 +1,301 @@
+:root {
+  --font: "Graphik Condensed", Arial Narrow, Helvetica neue Condensed, sans-serif;
+  --border: 3px solid rgb(239, 237, 237);
+}
+
+.body {
+  margin: 0px;
+  padding-inline: 4rem;
+  height: 100vh;
+}
+
+.header {
+  font-family: var(--font);
+  text-transform: uppercase;
+  display: flex;
+  border-bottom: var(--border);
+  margin-bottom: 3rem;
+  padding: 0px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding-right: 1%;
+  font-size: 40px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.sub-header {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0px;
+  margin-block: 5px;
+  font-weight: bold;
+}
+
+.menu-item {
+  display: flex;
+  align-items:center;
+  padding-inline: 10px;
+  padding-block: 5px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.hover-arrow {
+  height: 10px;
+  margin-left: 2px;
+  margin-top: 6px;
+  transform: rotate(180deg);
+  transition: transform 0.25s ;
+}
+
+.menu-item:hover .hover-arrow {
+  transform: rotate(0deg);
+}
+
+#dropdown-selection {
+  display: none;
+}
+
+#dropdown-item {
+  font-weight: normal;
+  text-transform: capitalize;
+  padding-inline: 30px;
+  padding-block: 6px;
+}
+
+.menu-item:hover #dropdown-selection {
+  /* visibility: visible; */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 8rem;
+  position: absolute;
+  padding: 0px;
+  list-style: none;
+  background-color: rgb(249, 247, 247);
+  border-radius:8px;
+}
+
+#dropdown-selection:hover {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  margin-top: 6rem;
+  padding: 0px;
+  list-style: none;
+  background-color: rgb(249, 247, 247);
+}
+
+#dropdown-item:hover {
+  background-color: white;
+  border-radius: 8px;
+}
+
+#sub-btn {
+  background-color: rgb(220, 3, 3);
+  color: white;
+  font-size: 16px;
+  padding-block: 10px;
+  padding-inline: 18px;
+  border: none;
+  transition: opacity 0.15s;
+}
+
+#sub-btn:hover {
+  opacity:0.7;
+}
+
+#sub-btn:active {
+  opacity:0.5;
+}
+
+.content {
+  border-bottom: var(--border);
+}
+
+.art-banner {
+  display: flex;
+  gap: 10px;
+  background-color: rgb(237, 247, 253);
+}
+
+.art-banner-item {
+  width: 50%;
+}
+
+.art-banner-item.image {
+  padding-left: 3%;
+}
+
+.art-banner-item.text {
+  padding-block: 20px;
+  padding-inline: 30px;
+  font-size: 30px;
+}
+
+.category {
+  font-family: var(--font);
+  text-transform: uppercase;
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#title {
+  font-weight: bold;
+}
+
+#summary {
+  font-size: 22px;
+}
+
+#author {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+#date {
+  font-size: 16px;
+  font-weight: lighter;
+  color: gray;
+}
+
+.main-content {
+  display: flex;
+  margin-top: 50px;
+}
+
+.feed {
+  flex-basis: 100%;
+  display: grid;
+  grid: 300px / auto auto auto auto;
+  row-gap: 170px;
+  column-gap: 20px;
+}
+
+.feed-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 400px;
+  width: 250px;
+}
+
+.feed-item.image {
+  margin: 0px;
+  height: 40%;
+  width: 100%;
+}
+
+.latest-news {
+  height: 400px;
+  width: 300px;
+  padding: 10px;
+  border-left: 5px solid rgb(237, 247, 253);
+  font-weight: bold;
+}
+
+.latest-news-section-title {
+  margin: 0px;
+  font-size: 30px;
+  border-bottom: 2px solid;
+}
+
+.latest-news-item {
+  margin-block: 20px;
+  font-size: 20px;
+}
+
+.latest-time {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: lighter;
+  color: gray;
+}
+
+
+
+
+.footer {
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+}
+
+.topics {
+  display: flex;
+  gap: 10px;
+  border-bottom: var(--border);
+  padding-block: 1rem;
+  padding-inline: 3rem;
+  /* flex-basis: 100%; */
+}
+
+.barrier {
+  border-left: var(--border);
+}
+
+.topic {
+  display: flex;
+  flex-direction: column;
+  /* flex-basis: 100%; */
+}
+
+.t.category{
+  text-transform: capitalize;
+  margin-top: 0%;
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+
+.topic-item-col {
+  display: grid;
+  gap: 10px;
+  padding: 0%;
+  margin: 0%;
+  list-style: none;
+  flex-basis: 100%;
+}
+
+#rankings {
+  grid: auto / auto auto;
+}
+
+#section {
+  grid: auto / auto auto auto auto auto;
+}
+
+
+.topic-item {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.bottom {
+  display: flex;
+}
+
+.social {
+  display: flex;
+  gap:1rem;
+  list-style: none;
+}
+
+.social-icon {
+  height: 2rem;
+}
